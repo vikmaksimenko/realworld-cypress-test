@@ -13,3 +13,14 @@ cat backup.sql | docker exec -i realworld-nx-nestjs-angular_database_1 /usr/bin/
 ```
 5. Login to RealWorld test app with `test@test.com/test` to check that data was seed correctly. 
 
+## Running test
+
+You may run tests with 'npm test'
+
+## Improvements
+
+-[ ] Add extra check for article to appear in Global Feed.
+-[ ] Add cleanup method.
+-[ ] Improve code readability by moving checks and actions to specific commands.
+-[ ] Configure linters.
+-[ ] Set up a single compose file for setting up test environment.
