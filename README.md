@@ -19,7 +19,7 @@ You may run tests with 'npm test'
 
 ## Improvements
 
--[ ] Add extra check for article to appear in Global Feed.
+-[x] Add extra check for article to appear in Global Feed.
 -[ ] Add cleanup method.
 -[ ] Improve code readability by moving checks and actions to specific commands.
 -[ ] Configure linters.
