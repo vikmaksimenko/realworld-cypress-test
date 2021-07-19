@@ -20,7 +20,7 @@ You may run tests with 'npm test'
 ## Improvements
 
 -[x] Add extra check for article to appear in Global Feed.
+-[x] Improve code readability by moving checks and actions to specific commands.
 -[ ] Add cleanup method.
--[ ] Improve code readability by moving checks and actions to specific commands.
 -[ ] Configure linters.
 -[ ] Set up a single compose file for setting up test environment.

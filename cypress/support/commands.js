@@ -19,3 +19,7 @@ Cypress.Commands.add('fetchTexts', ($els) => {
           .map((el) => el.innerText)
   );
 });
+
+Cypress.Commands.add('times', (count, closure) => {
+  cy.wrap(Array.from({length: count}, (v, k) => k + 1)).each(closure);
+});
