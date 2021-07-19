@@ -1,0 +1,15 @@
+{
+  "name": "technest-automation",
+  "version": "1.0.0",
+  "description": "Technest Test Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Viktor Maksymenko",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^7.7.0",
+    "typescript": "^4.3.5"
+  }
+}
