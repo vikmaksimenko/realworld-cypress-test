@@ -29,15 +29,9 @@ describe('user creating articles', () => {
           first().should('have.text', 'Description #' + index).
           next().should('contain.text', 'Body #' + index);
 
-      cy.get('.tag-list > .tag-pill').should('have.length', 2).then(($els) => {
-        // we get a list of jQuery elements
-        // let's convert the jQuery object into a plain array
-        return (
-            Cypress.$.makeArray($els)
-                // and extract inner text from each
-                .map((el) => el.innerText)
-        );
-      }).should('deep.equal', ['tag#' + index, 'tag#' + (index + 1)]);
+      cy.get('.tag-list > .tag-pill').
+          then($els => cy.fetchTexts($els)).
+          should('deep.equal', ['tag#' + index, 'tag#' + (index + 1)]);
     });
 
     // Check articles on feed
@@ -50,11 +44,9 @@ describe('user creating articles', () => {
         cy.get('h1').should('have.text', 'Article #' + item);
         cy.get('p').should('have.text', 'Description #' + item);
 
-        cy.get('.tag-list > .tag-pill').should('have.length', 2).then(($els) => {
-          return (
-              Cypress.$.makeArray($els).map((el) => el.innerText)
-          );
-        }).should('deep.equal', ['tag#' + item, 'tag#' + (item + 1)]);
+        cy.get('.tag-list > .tag-pill').
+            then(($els) => cy.fetchTexts($els)).
+            should('deep.equal', ['tag#' + item, 'tag#' + (item + 1)]);
       });
 
       if ((index + 1) % 10 == 0) {
